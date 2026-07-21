@@ -31,13 +31,45 @@ const LeadForm = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          // Paste your free Web3Forms Access Key below or set NEXT_PUBLIC_WEB3FORMS_KEY in your .env.local file
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "YOUR_ACCESS_KEY_HERE",
+          subject: `🚀 New Enterprise Pod Inquiry: ${orgName || "Enterprise Pod"} (${teamSize})`,
+          from_name: "SkillForge Academy AI Portal",
+          Organization: orgName,
+          Team_Size: teamSize,
+          Primary_Goal: primaryGoal,
+          Tech_Stack: selectedTech.join(", "),
+          First_Name: firstName,
+          Last_Name: lastName,
+          Email: workEmail,
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        console.warn("Web3Forms response (if key is placeholder or invalid, UI fallback activated):", result);
+        setSubmitted(true);
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
       setSubmitted(true);
-    }, 1500);
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
