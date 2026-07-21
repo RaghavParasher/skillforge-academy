@@ -43,8 +43,8 @@ const LeadForm = () => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          // Paste your free Web3Forms Access Key below or set NEXT_PUBLIC_WEB3FORMS_KEY in your .env.local file
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "YOUR_ACCESS_KEY_HERE",
+          // Web3Forms Access Key for instant lead email notifications
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "4326c662-3274-4e37-9e42-eb587e7269f2",
           subject: `🚀 New Enterprise Pod Inquiry: ${orgName || "Enterprise Pod"} (${teamSize})`,
           from_name: "SkillForge Academy AI Portal",
           Organization: orgName,
