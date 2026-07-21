@@ -49,13 +49,13 @@ const features = [
   }
 ];
 
-const AccredianEdge = () => {
+const SkillForgeEdge = () => {
   return (
     <section className="section-padding bg-gray-50/50">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-secondary mb-6">
-            The <span className="text-primary">Accredian Edge</span>
+            The <span className="text-primary">SkillForge Edge</span>
           </h2>
           <p className="text-lg text-text-muted">
             We don't just provide courses; we build capabilities that transform organizations.
@@ -87,4 +87,4 @@ const AccredianEdge = () => {
   );
 };
 
-export default AccredianEdge;
+export default SkillForgeEdge;

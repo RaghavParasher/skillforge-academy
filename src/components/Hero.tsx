@@ -37,7 +37,7 @@ const Hero = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-text-muted mb-10 max-w-2xl mx-auto leading-relaxed">
-              Accelerate growth and innovation with Accredian's enterprise-grade learning solutions tailored for modern business challenges.
+              Accelerate growth and innovation with SkillForge Academy's enterprise-grade learning solutions tailored for modern business challenges.
             </p>
           </motion.div>
 

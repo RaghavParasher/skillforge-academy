@@ -55,7 +55,7 @@ const LeadForm = () => {
               Ready to <span className="text-blue-200">Scale</span> Your <br /> Training?
             </h2>
             <p className="text-xl text-blue-100 mb-10 leading-relaxed">
-              Join 200+ organizations that have already transformed their workforce with Accredian. Fill out the form and let's build your custom learning roadmap.
+              Join 200+ organizations that have already transformed their workforce with SkillForge Academy. Fill out the form and let's build your custom learning roadmap.
             </p>
             
             <div className="space-y-6">

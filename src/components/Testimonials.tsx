@@ -6,7 +6,7 @@ import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Accredian's Data Science program transformed our analytics team. The custom curriculum was exactly what we needed for our retail use cases.",
+    quote: "SkillForge Academy's Data Science program transformed our analytics team. The custom curriculum was exactly what we needed for our retail use cases.",
     author: "Sarah Jenkins",
     role: "Head of Data, Global Retail Corp",
     rating: 5
@@ -18,7 +18,7 @@ const testimonials = [
     rating: 5
   },
   {
-    quote: "Scaling our tech team's skills was a challenge until we partnered with Accredian. Their delivery process is seamless and highly effective.",
+    quote: "Scaling our tech team's skills was a challenge until we partnered with SkillForge Academy. Their delivery process is seamless and highly effective.",
     author: "Priya Sharma",
     role: "VP Engineering, TechInnovate",
     rating: 5

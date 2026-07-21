@@ -34,13 +34,13 @@ const Navbar = () => {
       <div className="container-custom flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
           <div className="bg-primary text-white p-1 rounded-md font-bold text-xl px-2">
-            A
+            S
           </div>
           <span className="font-bold text-2xl tracking-tight text-secondary">
-            Accredian
+            SkillForge
           </span>
           <span className="text-xs font-medium bg-gray-100 text-gray-500 px-2 py-1 rounded-full">
-            Enterprise
+            Academy
           </span>
         </Link>
 

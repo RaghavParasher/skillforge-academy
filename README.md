@@ -1,9 +1,9 @@
-# Accredian Enterprise Page Clone
+# SkillForge Academy
 
-A premium, responsive landing page clone of [Accredian Enterprise](https://enterprise.accredian.com/) built with Next.js, Tailwind CSS, and Framer Motion.
+A premium, responsive enterprise training and workforce upskilling platform built with Next.js, Tailwind CSS, and Framer Motion.
 
 ## 🚀 Live Demo
-[Deployed on Vercel](https://accredian-enterprise-clone.vercel.app/) *(Placeholder Link)*
+[Deployed on Vercel](https://skillforge-academy.vercel.app/) *(Placeholder Link)*
 
 ## ✨ Features
 - **Modern UI/UX**: Clean, professional design with a focus on enterprise aesthetics.
@@ -13,7 +13,7 @@ A premium, responsive landing page clone of [Accredian Enterprise](https://enter
 - **Reusable Components**: Modular architecture for easy maintenance and scalability.
 
 ## 🛠️ Tech Stack
-- **Framework**: Next.js 14 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
@@ -23,8 +23,8 @@ A premium, responsive landing page clone of [Accredian Enterprise](https://enter
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/accredian-enterprise-clone.git
-   cd accredian-enterprise-clone
+   git clone https://github.com/your-username/skillforge-academy.git
+   cd skillforge-academy
    ```
 
 2. **Install dependencies**:
@@ -40,21 +40,15 @@ A premium, responsive landing page clone of [Accredian Enterprise](https://enter
 4. **Open in browser**:
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 🤖 AI Usage Disclosure
-This project was developed with the assistance of **Antigravity (Google Deepmind AI)**.
+## 🤖 Development Disclosure
+This project was developed and refined with the assistance of **Antigravity (Google Deepmind AI)**.
 
-- **Where AI helped**:
-  - Initial project scaffolding and directory structure.
-  - Component architecture and logic for the FAQ accordion and Lead Form.
+- **Key Highlights**:
+  - Modular component architecture (`SkillForgeEdge`, `ProgramModules`, `DomainExpertise`, `FAQ`, `LeadForm`).
   - Styling tokens and Tailwind configuration for a consistent design system.
-  - Generating placeholder content and data structures.
-- **Manual Improvements**:
-  - Refined the responsive layouts for mobile-first experience.
-  - Fine-tuned Framer Motion transition timings for a more "premium" feel.
-  - Structured the `globals.css` with custom utility classes.
-  - Organized the component hierarchy for better reusability.
+  - Smooth Framer Motion transitions and responsive mobile layouts.
 
-## 🚀 Improvements with More Time
+## 🚀 Future Roadmap
 - **Real Backend Integration**: Connect the lead form to a database (e.g., Supabase or MongoDB) or a CRM.
 - **Authentication**: Add a partner login portal.
 - **Search Functionality**: Implement search for courses and programs.
@@ -62,4 +56,4 @@ This project was developed with the assistance of **Antigravity (Google Deepmind
 - **Performance Optimization**: Image optimization and lazy loading for off-screen sections.
 
 ---
-Built with ❤️ for the Accredian Assignment.
+Built with ❤️ by Raghav Parasher.

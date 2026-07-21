@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import Partners from "@/components/Partners";
-import AccredianEdge from "@/components/AccredianEdge";
+import SkillForgeEdge from "@/components/SkillForgeEdge";
 import ProgramModules from "@/components/ProgramModules";
 import DomainExpertise from "@/components/DomainExpertise";
 import Testimonials from "@/components/Testimonials";
@@ -17,7 +17,7 @@ export default function Home() {
       <Hero />
       <Stats />
       <Partners />
-      <AccredianEdge />
+      <SkillForgeEdge />
       <ProgramModules />
       <DomainExpertise />
       <Testimonials />

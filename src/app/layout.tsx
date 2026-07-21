@@ -8,9 +8,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Accredian Enterprise | Corporate Learning & Development",
-  description: "Transform your workforce with Accredian's enterprise-grade learning solutions. Expert-led training in Data Science, AI, and Product Management.",
-  keywords: ["Enterprise Training", "Corporate Learning", "Data Science Training", "AI for Business", "Accredian"],
+  title: "SkillForge Academy | Corporate Learning & Development",
+  description: "Transform your workforce with SkillForge Academy's enterprise-grade learning solutions. Expert-led training in Data Science, AI, and Product Management.",
+  keywords: ["Enterprise Training", "Corporate Learning", "Data Science Training", "AI for Business", "SkillForge Academy"],
 };
 
 export default function RootLayout({

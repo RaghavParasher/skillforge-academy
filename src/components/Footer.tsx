@@ -11,9 +11,9 @@ const Footer = () => {
           <div className="col-span-1 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-6">
               <div className="bg-primary text-white p-1 rounded-md font-bold text-xl px-2">
-                A
+                S
               </div>
-              <span className="font-bold text-2xl tracking-tight">Accredian</span>
+              <span className="font-bold text-2xl tracking-tight">SkillForge Academy</span>
             </Link>
             <p className="text-gray-400 mb-8 leading-relaxed">
               Transforming corporate learning with data-driven insights and world-class certification programs.
@@ -57,7 +57,7 @@ const Footer = () => {
             <ul className="space-y-4 text-gray-400">
               <li className="flex gap-3">
                 <Mail size={18} className="text-primary shrink-0" />
-                <span>enterprise@accredian.com</span>
+                <span>enterprise@skillforgeacademy.com</span>
               </li>
               <li className="flex gap-3">
                 <Phone size={18} className="text-primary shrink-0" />
@@ -72,7 +72,7 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-          <p>© 2024 Accredian Enterprise. All rights reserved.</p>
+          <p>© 2024 SkillForge Academy. All rights reserved.</p>
           <div className="flex gap-8">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
