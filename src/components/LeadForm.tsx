@@ -31,6 +31,46 @@ const LeadForm = () => {
     }
   };
 
+  const getSyllabusSummary = () => {
+    const tech = selectedTech.length > 0 ? selectedTech.join(", ") : "AWS Cloud & Python";
+    if (primaryGoal.includes("RAG") || primaryGoal.includes("LLM")) {
+      return `
+Week 1-3: Transformer Architecture & Prompt Engineering at Scale (Tools: ${tech})
+Week 4-7: High-Accuracy RAG & Hybrid Vector Retrieval Pipelines
+Week 8-10: Fine-Tuning Open-Source LLMs (LoRA/QLoRA) on Proprietary Data
+Week 11-12: Production Capstone — Autonomous AI Agent Pod Deployment with Telemetry Guardrails
+      `.trim();
+    } else if (primaryGoal.includes("Kubernetes") || primaryGoal.includes("Multi-Cluster")) {
+      return `
+Week 1-2: Container Hardening & Kubernetes Core Architecture (Tools: ${tech})
+Week 3-5: Zero-Downtime Service Mesh Routing & Mutual TLS (Istio)
+Week 6-8: GitOps Continuous Delivery & Automated Failover across Multi-Region Clusters
+Week 9-12: Production Capstone — High-Throughput Microservice Pod Deployment
+      `.trim();
+    } else if (primaryGoal.includes("Lakehouse") || primaryGoal.includes("Spark")) {
+      return `
+Week 1-3: Distributed Stream Processing with Apache Kafka & Spark (Tools: ${tech})
+Week 4-7: Modern Lakehouse Architecture & ACID Transactions on Delta Lake
+Week 8-10: Automated Data Pipelines & Real-time Data Quality Assertions
+Week 11-12: Production Capstone — Sub-second Petabyte Streaming Pipeline
+      `.trim();
+    } else if (primaryGoal.includes("DevSecOps") || primaryGoal.includes("Zero-Trust")) {
+      return `
+Week 1-3: Zero-Trust Cloud Architecture & Least-Privilege IAM Hardening (Tools: ${tech})
+Week 4-7: Automated Pipeline Security (SAST/DAST/SCA) in CI/CD
+Week 8-10: Continuous Threat Modeling & Incident Response Playbooks
+Week 11-12: Production Capstone — Automated SOC2 Compliance & Red Team Audit
+      `.trim();
+    } else {
+      return `
+Week 1-3: Evaluating Enterprise AI Use Cases, ROI & Build vs. Buy Strategy (Tools: ${tech})
+Week 4-7: AI Governance, Data Privacy, Zero-Data-Retention Agreements & SOC2 Compliance
+Week 8-10: Engineering Pod Re-Architecture & High-Velocity Workflow Transition
+Week 11-12: Executive Capstone — 12-Month Corporate AI & Upskilling Roadmap
+      `.trim();
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -45,7 +85,7 @@ const LeadForm = () => {
         body: JSON.stringify({
           // Web3Forms Access Key for instant lead email notifications
           access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "4326c662-3274-4e37-9e42-eb587e7269f2",
-          subject: `🚀 New Enterprise Pod Inquiry: ${orgName || "Enterprise Pod"} (${teamSize})`,
+          subject: `🚀 Custom 12-Week AI Roadmap for ${orgName || "Enterprise Pod"} (${teamSize})`,
           from_name: "SkillForge Academy AI Portal",
           Organization: orgName,
           Team_Size: teamSize,
@@ -54,6 +94,7 @@ const LeadForm = () => {
           First_Name: firstName,
           Last_Name: lastName,
           Email: workEmail,
+          Custom_12_Week_Syllabus: getSyllabusSummary(),
         }),
       });
 
