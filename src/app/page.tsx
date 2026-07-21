@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
-import Partners from "@/components/Partners";
 import ROICalculator from "@/components/ROICalculator";
 import SkillForgeEdge from "@/components/SkillForgeEdge";
 import ManagerDashboardPreview from "@/components/ManagerDashboardPreview";
@@ -18,7 +17,6 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Stats />
-      <Partners />
       <ROICalculator />
       <SkillForgeEdge />
       <div id="about">

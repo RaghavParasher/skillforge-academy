@@ -6,10 +6,6 @@ import { ChevronDown, HelpCircle } from "lucide-react";
 
 const faqs = [
   {
-    question: "How does SkillForge AI training differ from standard video courses like Udemy or Coursera?",
-    answer: "Standard courses teach generic theory in isolation. SkillForge embeds interactive AI coding labs, principal architect code reviews, and live GitHub PR integration directly inside your enterprise environment. Every module ends with an on-chain verified capstone project executed within your own cloud architecture."
-  },
-  {
     question: "How does the Live ROI Telemetry and GitHub PR velocity tracking work?",
     answer: "We provide an optional read-only telemetry agent that connects to Jira and GitHub organization hooks. It tracks PR cycle times, code review speeds, and vulnerability reduction before and after upskilling cohorts, providing your executive team with real-time ROI proof on the Governance Dashboard."
   },
@@ -49,7 +45,7 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="glass-card rounded-2xl overflow-hidden transition-all duration-300"
+              className="glass-card rounded-2xl overflow-hidden transition-all duration-300 border border-slate-800/80 hover:border-cyan-500/30"
             >
               <button
                 className="w-full p-6 text-left flex justify-between items-center gap-4 focus:outline-none"
@@ -60,16 +56,15 @@ const FAQ = () => {
                   <ChevronDown className="text-cyan-400" />
                 </div>
               </button>
-              
               <AnimatePresence>
                 {activeIndex === index && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.25 }}
+                    transition={{ duration: 0.3 }}
                   >
-                    <div className="px-6 pb-6 text-sm sm:text-base text-text-muted leading-relaxed border-t border-slate-800/80 pt-4 font-sans">
+                    <div className="px-6 pb-6 pt-2 text-text-muted text-sm sm:text-base leading-relaxed border-t border-slate-800/50">
                       {faq.answer}
                     </div>
                   </motion.div>

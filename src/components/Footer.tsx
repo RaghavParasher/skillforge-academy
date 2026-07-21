@@ -1,14 +1,14 @@
 import React from "react";
 import Link from "next/link";
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, Sparkles, Terminal, Shield, Cpu } from "lucide-react";
+import { Sparkles, Terminal, Shield, Cpu } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="bg-slate-950 text-white pt-20 pb-12 border-t border-slate-800/80">
       <div className="container-custom">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
           {/* Brand Info */}
-          <div className="col-span-1 lg:col-span-1">
+          <div>
             <Link href="/" className="flex items-center gap-2.5 mb-6 group">
               <div className="bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600 text-slate-950 p-1.5 rounded-xl font-black text-xl px-2.5 shadow-lg shadow-cyan-500/25 group-hover:scale-105 transition-transform">
                 S
@@ -17,16 +17,9 @@ const Footer = () => {
                 SkillForge <span className="text-xs font-mono font-bold uppercase tracking-wider bg-cyan-500/10 text-cyan-400 px-2 py-0.5 rounded-full border border-cyan-500/30">AI Platform</span>
               </span>
             </Link>
-            <p className="text-slate-400 mb-8 text-sm leading-relaxed">
-              Empowering enterprise engineering pods with interactive AI labs, principal architect code reviews, and live ROI telemetry.
+            <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
+              Empowering enterprise engineering pods with interactive AI labs, principal architect code reviews, and live ROI telemetry. All coding labs run on SOC2 Type II isolated sandboxes.
             </p>
-            <div className="flex gap-3">
-              {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 transition-all">
-                  <Icon size={18} />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Programs */}
@@ -52,25 +45,6 @@ const Footer = () => {
               <li><Link href="#contact" className="hover:text-cyan-400 transition-colors">Schedule Technical Audit</Link></li>
             </ul>
           </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="text-base font-mono font-bold text-white mb-6 uppercase tracking-wider">Direct Contact</h4>
-            <ul className="space-y-4 text-sm font-sans text-slate-400">
-              <li className="flex items-center gap-3">
-                <Mail size={18} className="text-cyan-400 shrink-0" />
-                <span className="font-mono text-xs text-slate-300">enterprise@skillforgeacademy.com</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone size={18} className="text-cyan-400 shrink-0" />
-                <span className="font-mono text-xs text-slate-300">+1 (800) 555-SKILL / Global</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin size={18} className="text-cyan-400 shrink-0 mt-0.5" />
-                <span className="text-xs text-slate-400">548 Market St, San Francisco, CA &bull; Tech Hub Gurgaon</span>
-              </li>
-            </ul>
-          </div>
         </div>
 
         <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-mono text-slate-500">
@@ -78,7 +52,9 @@ const Footer = () => {
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span>All enterprise coding labs running securely on SOC2 Type II isolated instances.</span>
           </div>
-          <p>© 2026 SkillForge Academy AI Platform. All rights reserved.</p>
+          <div>
+            &copy; {new Date().getFullYear()} SkillForge Academy Inc. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>

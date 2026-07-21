@@ -171,7 +171,7 @@ PHASE 2: MODERN LAKEHOUSE & ACID TRANSACTIONS (WEEKS 4 - 7)
   - Lab 4.1: ACID transaction logs, snapshot isolation, and concurrent reader/writer concurrency controls.
   - Lab 4.2: Schema evolution, partition pruning, and Z-Order indexing for sub-second query performance.
 • Week 5: Time Travel & Storage Optimization
-  - Lab 5.1: Point-in-time table restoration, vacuuming old parquet files, and compaction (`OPTIMIZE`).
+  - Lab 5.1: Point-in-time table restoration, vacuuming old parquet files, and compaction ('OPTIMIZE').
   - Lab 5.2: Cost optimization across petabyte-scale cloud object storage buckets on ${tech}.
 • Week 6: Serverless Query Engines & Data Virtualization
   - Lab 6.1: High-concurrency SQL queries using Snowflake / Databricks SQL warehouses.

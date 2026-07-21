@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Database, BrainCircuit, Code, LineChart, Cpu, Cloud } from "lucide-react";
+import { Database, BrainCircuit, Code, LineChart, Cpu, Cloud, ArrowRight } from "lucide-react";
 
 const domains = [
   { name: "Generative AI & LLMs", icon: BrainCircuit, count: "48+ Enterprise Labs", color: "text-cyan-400", border: "hover:border-cyan-500/40" },
@@ -15,7 +15,7 @@ const domains = [
 
 const DomainExpertise = () => {
   return (
-    <section className="section-padding bg-slate-950/60 border-t border-slate-800/80">
+    <section className="section-padding bg-slate-950/60 border-t border-slate-800/80 relative">
       <div className="container-custom">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
@@ -26,8 +26,11 @@ const DomainExpertise = () => {
               Deep-dive into mission-critical engineering fields with curriculum developed and audited by principal architects from tier-1 technology leaders.
             </p>
           </div>
-          <a href="#programs" className="text-cyan-400 font-mono text-sm font-bold flex items-center gap-2 hover:text-cyan-300 transition-colors">
-            Explore All 230+ Labs &rarr;
+          <a
+            href="#programs"
+            className="text-cyan-400 font-mono text-sm font-bold flex items-center gap-2 hover:text-cyan-300 transition-all bg-cyan-500/10 px-4 py-2.5 rounded-xl border border-cyan-500/30 shadow-md shadow-cyan-500/10 group"
+          >
+            Explore All 230+ Labs <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
 
@@ -39,13 +42,23 @@ const DomainExpertise = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className={`flex flex-col items-center text-center p-6 rounded-2xl glass-card border border-slate-800/80 ${domain.border} transition-all cursor-pointer group`}
             >
-              <div className={`w-14 h-14 rounded-2xl bg-slate-900 flex items-center justify-center ${domain.color} mb-4 group-hover:scale-110 transition-transform shadow-md`}>
-                <domain.icon size={32} strokeWidth={1.5} />
-              </div>
-              <h4 className="font-bold text-white text-sm mb-1">{domain.name}</h4>
-              <p className="text-xs font-mono text-text-muted mt-1">{domain.count}</p>
+              <a
+                href="#programs"
+                className={`flex flex-col items-center text-center p-6 rounded-2xl glass-card border border-slate-800/80 ${domain.border} hover:bg-slate-900/90 transition-all cursor-pointer group w-full h-full justify-between block relative shadow-lg`}
+              >
+                <div className="flex flex-col items-center w-full">
+                  <div className={`w-14 h-14 rounded-2xl bg-slate-900 flex items-center justify-center ${domain.color} mb-4 group-hover:scale-110 transition-transform shadow-md border border-slate-800`}>
+                    <domain.icon size={32} strokeWidth={1.5} />
+                  </div>
+                  <h4 className="font-bold text-white text-sm mb-1 group-hover:text-cyan-300 transition-colors">{domain.name}</h4>
+                  <p className="text-xs font-mono text-text-muted mt-1">{domain.count}</p>
+                </div>
+                <div className="mt-4 pt-3 border-t border-slate-800/60 w-full flex items-center justify-center gap-1.5 text-[11px] font-mono text-slate-400 group-hover:text-cyan-400 transition-colors">
+                  <span>View Tracks</span>
+                  <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+                </div>
+              </a>
             </motion.div>
           ))}
         </div>
