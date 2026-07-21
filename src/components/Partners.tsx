@@ -4,26 +4,26 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const partners = [
-  "Google", "Amazon", "Microsoft", "Meta", "Netflix", "Adobe", "Salesforce", "IBM"
+  "Google Cloud", "Amazon Web Services", "Microsoft Azure", "Meta AI", "OpenAI Labs", "Databricks", "Snowflake", "Anthropic"
 ];
 
 const Partners = () => {
   return (
-    <section className="py-16 bg-white border-b border-gray-100">
+    <section className="py-14 bg-slate-950 border-b border-slate-800/80">
       <div className="container-custom">
-        <p className="text-center text-sm font-bold text-gray-400 uppercase tracking-[0.2em] mb-12">
-          Trusted by Industry Leaders Worldwide
+        <p className="text-center text-xs font-mono font-bold text-slate-500 uppercase tracking-[0.25em] mb-10">
+          Trusted by Engineering Leaders at Top AI & Tech Organizations
         </p>
         
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 hover:opacity-100 transition-opacity duration-500">
           {partners.map((partner, index) => (
             <motion.div
               key={partner}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="text-2xl md:text-3xl font-black text-gray-800 tracking-tighter"
+              className="text-xl md:text-2xl font-black text-slate-400 hover:text-cyan-400 font-mono tracking-tight transition-colors cursor-default"
             >
               {partner}
             </motion.div>
