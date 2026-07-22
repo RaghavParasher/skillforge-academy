@@ -8,9 +8,26 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SkillForge Academy | Corporate Learning & Development",
-  description: "Transform your workforce with SkillForge Academy's enterprise-grade learning solutions. Expert-led training in Data Science, AI, and Product Management.",
-  keywords: ["Enterprise Training", "Corporate Learning", "Data Science Training", "AI for Business", "SkillForge Academy"],
+  title: "SkillForge Academy | Enterprise AI & Engineering Upskilling Platform",
+  description: "Accelerate your engineering pod's velocity with custom 12-week AI upskilling roadmaps, hands-on architectural coding labs, and live Jira/GitHub ROI telemetry.",
+  keywords: [
+    "Enterprise AI Training",
+    "Corporate Learning",
+    "GenAI Upskilling",
+    "Kubernetes Mesh",
+    "SkillForge Academy",
+    "PR Velocity Tracking",
+    "SOC2 Sandboxes",
+    "MLOps Production"
+  ],
+  authors: [{ name: "Raghav Parasher", url: "https://skillforge-academyy.vercel.app/" }],
+  openGraph: {
+    title: "SkillForge Academy | High-Velocity AI Workforce Engine",
+    description: "Interactive coding labs, principal architect reviews, and live engineering velocity telemetry for high-performance teams.",
+    url: "https://skillforge-academyy.vercel.app/",
+    siteName: "SkillForge Academy",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -26,4 +43,3 @@ export default function RootLayout({
     </html>
   );
 }
-
